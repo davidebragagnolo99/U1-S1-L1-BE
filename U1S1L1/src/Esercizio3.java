@@ -4,6 +4,7 @@ public class Esercizio3 {
     public static void main(String[] args) {
        // perimetroRettangolo();
        // pariDispari();
+       // perimetroTriangolo();
     }
     public static void perimetroRettangolo() {
         Scanner userCalc = new Scanner(System.in);
@@ -25,6 +26,20 @@ public class Esercizio3 {
         } else {
             System.out.println(1);
         }
+        in.close();
+    }
+
+    public  static  void perimetroTriangolo() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Lato 1: ");
+        double lato1 = in.nextDouble();
+        System.out.print("Lato 2: ");
+        double lato2 = in.nextDouble();
+        System.out.print("Lato 3: ");
+        double lato3 = in.nextDouble();
+        double perimetro = lato1+lato2+lato3;
+        double area = Math.sqrt(perimetro * (perimetro-lato1) * (perimetro-lato2) * (perimetro-lato3))/4;
+        System.out.println("L'area del triangolo è: " + area);
         in.close();
     }
 }
